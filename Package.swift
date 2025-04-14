@@ -4,21 +4,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "DeepLinking",
-    products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "DeepLinking",
-            targets: ["DeepLinking"]),
-    ],
-    targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "DeepLinking"),
-        .testTarget(
-            name: "DeepLinkingTests",
-            dependencies: ["DeepLinking"]
-        ),
-    ]
+  name: "deep-linking",
+  products: [
+    .library(name: "DeepLinking", targets: ["DeepLinking"]),
+  ],
+  targets: [
+    .target(name: "DeepLinking"),
+    .testTarget(name: "DeepLinkingTests", dependencies: ["DeepLinking"]),
+  ]
 )
