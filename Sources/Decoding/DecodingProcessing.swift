@@ -14,7 +14,6 @@ internal protocol _OptionalProtocol<Wrapped>: ~Copyable {
 
 extension Optional: _OptionalProtocol {}
 
-
 // MARK:  URL Template Matching
 
 extension InAppLinkDiscriminant {
