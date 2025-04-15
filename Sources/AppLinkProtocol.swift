@@ -23,7 +23,7 @@ public protocol InAppLinkDiscriminant: CaseIterable, Equatable, Sendable {
 
 extension InAppLinkDiscriminant {
   public static func make(urlPath: String) -> (discriminant: Self, extractedComponents: [String])? {
-    let instance = try? Self(_value: urlPath, relatedTo: \.pathTemplate, predicate: { urlPath, pathTemplate -> Bool in
+    let instance = try? Self(value: urlPath, relatedTo: \.pathTemplate, predicate: { urlPath, pathTemplate -> Bool in
       let (matches, _) = Self.urlPath(urlPath, matchesPathTemplate: pathTemplate)
       return matches
     })
